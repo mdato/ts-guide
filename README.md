@@ -5,4 +5,4 @@ guide - how to use react + typescript
 https://ts-guide.vercel.app/
 
 ### BACode by Marcelo Dato :: Full Stack Developer :: LingBodie
-https://bacode
+https://bacode.com.ar
