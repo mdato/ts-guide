@@ -44,7 +44,14 @@ import { CustomInput } from "./components/page/CustomInput";
 import { CustomComponents } from "./components/page/CustomComponents";
 import { Poly } from "./components/page/Poly";
 
-function App() {
+import { FC } from "react";
+import { Enums1 } from "./components/Enums1";
+import { Enums2, Bandera } from "./components/Enums2";
+import { Types1 } from "./components/Types1";
+import Context1 from "./components/Context1";
+
+// function App() {
+const App: FC = () => {
   const personName = {
     nombre: "Papa",
     apellido: "Lemmy",
@@ -68,7 +75,7 @@ function App() {
 
   return (
     <div className="App">
-            <Secure isLoggedIn={true} Component={User8} />
+      <Secure isLoggedIn={true} Component={User8} />
       <p>---</p>
 
       <Poly as="label" size="small" color="primary" htmlFor="someId">
@@ -87,6 +94,15 @@ function App() {
       <p>---</p>
       <DomRef />
       <p>---</p>
+
+      <Context1 />
+      <p>---</p>
+      <Types1 equipo="Boca Juniors" titulosObtenidos={40} bandera={Bandera.azulAmarilla} />
+      <p>---</p>
+      <Enums1 />
+      <p>---</p>
+      <Enums2 equipo="Boca Juniors" titulosObtenidos={40} bandera={Bandera.azulAmarilla} />
+
       <Person1 nombre="Cacho" edad={25} />
       <p>---</p>
       <Basico />
@@ -225,6 +241,6 @@ function App() {
       <Status estado="error" />
     </div>
   );
-}
+};
 
 export default App;
