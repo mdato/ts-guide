@@ -6,6 +6,7 @@ type InputProps = {
 const Input = (props: InputProps) => {
   return (
     <div>
+      <h5>not allow insert text, but view message from console</h5>
       <input type="text" value={props.value} onChange={props.handleChange} />
     </div>
   );

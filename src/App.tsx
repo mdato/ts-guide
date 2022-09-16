@@ -29,6 +29,20 @@ import Status from "./components/Status";
 import { Add1 } from "./components/class/Add1";
 import { Secure } from "./components/auth/Secure";
 import { User8 } from "./components/auth/User8";
+import { List } from "./components/varios/List";
+import { RandomValue } from "./components/varios/RandomValue";
+
+import { Person1 } from "./components/Person1";
+import { Basico } from "./components/Basico";
+import { Person4 } from "./components/Person4";
+import { States1 } from "./components/States1";
+import { Person3 } from "./components/Person3";
+import { States2 } from "./components/States2";
+import { PopUp } from "./components/template/PopUp";
+import { CustomButton } from "./components/page/CustomButton";
+import { CustomInput } from "./components/page/CustomInput";
+import { CustomComponents } from "./components/page/CustomComponents";
+import { Poly } from "./components/page/Poly";
 
 function App() {
   const personName = {
@@ -54,16 +68,87 @@ function App() {
 
   return (
     <div className="App">
+            <Secure isLoggedIn={true} Component={User8} />
       <p>---</p>
-      <Secure isLoggedIn={true} Component={User8} />
+
+      <Poly as="label" size="small" color="primary" htmlFor="someId">
+        label
+      </Poly>
+      <Poly as="h1" size="large">
+        heading
+      </Poly>
+      <Poly as="p" size="medium">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam,
+        vel.
+      </Poly>
+      <Poly as="h5" size="small">
+        heading
+      </Poly>
       <p>---</p>
+      <DomRef />
+      <p>---</p>
+      <Person1 nombre="Cacho" edad={25} />
+      <p>---</p>
+      <Basico />
+
+      <p>---</p>
+      <CustomComponents nombre="Bodie" numMensajes={25} estaLogueado={true} />
+      <p>---</p>
+      <CustomInput />
+      <p>---</p>
+      <CustomButton variant="danger" onClick={() => console.log("clicked")}>
+        Button Danger
+      </CustomButton>
+
+      <p>---</p>
+      <Person4 direccion="las heras 2340" telefono={45818745} />
+      <p>---</p>
+
+      <States1 />
+      <p>---</p>
+
+      <Person3 ciudad="Buenos Aires" codPais={54} />
+      <States2 />
+
+      <p>---</p>
+      <PopUp position="center" />
+      <p>---</p>
+      <RandomValue value={50} isPositive />
+      <p>---</p>
+
+      {/* <List
+        
+        items={[1, 2, 3]}
+        onClick={(item) => console.log(item)}
+      />
+      <List
+       
+        items={["mouse", "screen", "disk"]}
+        onClick={(item) => console.log(item)}
+      /> */}
+      <List
+        items={[
+          {
+            id: 1,
+            alias: "bodie",
+            tel: "77575578",
+          },
+          {
+            id: 2,
+            alias: "lemmy",
+            tel: "3276854",
+          },
+        ]}
+        onClick={(item) => console.log(item)}
+      />
+
+      <p>---</p>
+
       <Add1 message="the value is: " />
       <p>---</p>
       <DateTime />
       <p>---</p>
       <MutableRef />
-      <p>---</p>
-      <DomRef />
       <p>---</p>
       <ClientContextProvider>
         <Client />

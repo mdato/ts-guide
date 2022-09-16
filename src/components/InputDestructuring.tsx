@@ -7,6 +7,7 @@ type InputProps = {
 const InputDestructuring = ({ value, handleChange }: InputProps) => {
   return (
     <div>
+      <h5>not allow insert text, but view message from console</h5>
       {/* <input type="text" value={props.value} onChange={props.handleChange} /> */}
       <input type="text" value={value} onChange={handleChange} />
     </div>
