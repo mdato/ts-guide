@@ -18,11 +18,17 @@ import Person from "./components/Person";
 import Person2 from "./components/Person2";
 import PersonList from "./components/PersonList";
 import PersonList8 from "./components/PersonList8";
+import DateTime from "./components/state/DateTime";
+import { DomRef } from "./components/refs/DomRef";
+import { MutableRef } from "./components/refs/MutableRef";
 import { AddRemove } from "./components/state/AddRemove";
 import { LoggedIn } from "./components/state/LoggedIn";
 import { User } from "./components/state/User";
 import { User2 } from "./components/state/User2";
 import Status from "./components/Status";
+import { Add1 } from "./components/class/Add1";
+import { Secure } from "./components/auth/Secure";
+import { User8 } from "./components/auth/User8";
 
 function App() {
   const personName = {
@@ -48,6 +54,16 @@ function App() {
 
   return (
     <div className="App">
+      <p>---</p>
+      <Secure isLoggedIn={true} Component={User8} />
+      <p>---</p>
+      <Add1 message="the value is: " />
+      <p>---</p>
+      <DateTime />
+      <p>---</p>
+      <MutableRef />
+      <p>---</p>
+      <DomRef />
       <p>---</p>
       <ClientContextProvider>
         <Client />
